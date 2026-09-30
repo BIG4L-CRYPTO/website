@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial,sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+.navbar{
+    background-color: #1d2230;
+    color: white;
+    padding: 25px 8%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.navbar h1{
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.navbar nav{
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.navbar nav a{
+    padding: 10px 18px;
+    border: 1px solid #f58220;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.navbar nav a:hover{
+     transform: translateY(-8px);
+    box-shadow: 0 8px 18px #f58220;
+    color: white;
+}
+
+.navbar nav a.active{
+    color: #f58220;
+}
+
+.hero{
+    background-color: #1d2230;
+    color: white;
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.hero content{
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h2{
+    color: #f58220;
+    font-size: 48px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.hero p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero a{
+    display: inline-block;
+    background-color: #f58220;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero a:hover{
+    background-color: white;
+    color: #1d2230;
+}
+
+.dovatech-showcase{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dovatech-showcase img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slides img{
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.dovatech-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(29, 34, 48, 0.85);
+}
+
+.dovatech-nav h1{
+    font-size: 24px;
+    color: white;
+}
+
+.dovatech-nav nav a{
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border: 1px solid #f58220;
+    border-radius: 5px;
+}
+
+.dovatech-nav nav a:hover{
+    background-color: #f58220;
+}
+
+.home-service{
+    background-color: #f5f5f5;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.home-service h2{
+    text-decoration: underline;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1d2230;
+}
+
+.home-service-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.home-service-card{
+    background-color: white;
+    color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    border-top: 4px solid #f58220;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.home-service-card h3{
+    color: #f58220;
+    margin-bottom: 15px;
+}
+
+.home-service-card p{
+    line-height: 1.6;
+}
+
+.view-services{
+    display: inline-block;
+    background-color: #f58220;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.view-services:hover{
+    background-color: #1d2230;
+}
+
+.navbar-about{
+    background-color: #1d2230;
+    color: white;
+    padding: 20px 60px;
+}
+
+.about{
+    background-color: #1d2230;
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2{
+    font-size: 42px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    color: #f58220;
+}
+
+.about p{
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: auto;
+}
+
+.MISSION-VISION{
+    padding: 70px 10%;
+    Text-align: center;
+}
+
+.MISSION-VISION h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.MISSION-VISION div{
+    background-color: #f5f5f5;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-left: 5px solid #f58220;
+    border-radius: 8px;
+}
+
+.MISSION-VISION h3{
+    text-decoration: underline;
+    Color: #f58220;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.MISSION-VISION p{
+    line-height: 1.7;
+    max-width: 900px;
+    margin: auto;
+}
+
+.WHY-US{
+    Background-color: #1d2230;
+    color: white;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.WHY-US h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.WHY-US h3{
+    color: #f58220;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.WHY-US div{
+    background-color: #252b3a;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.WHY-US p{
+    line-height: 1.6;
+}
+
+.services-intro{
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.services-intro h2{
+    letter-spacing: 2px;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #f58220;
+    text-decoration: underline;
+}
+
+.services-intro p{
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    gap: 25px;
+    padding: 30px 10% 70px;
+}
+
+.service-card{
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    border-top:4px solid #f58220;
+    text-align: center;
+    min-height: 180px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3{
+    color: #1d2230;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.service-card p{
+    line-height: 1.6;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.services-cta{
+    background-color: #1d2230;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.services-cta h2{
+    color: #f58220;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.services-cta p{
+    margin-bottom: 25px;
+}
+
+.services-cta a{
+    display: inline-block;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+}
+
+.services-cta a:hover{
+    background-color: #f58220;
+    color: #1d2230;
+}
+@media (max-width: 768px){
+    .services{
+        grid-template-columns: 1fr;
+        padding: 30px 8%;
+    }
+    .services-intro h2{
+        font-size: 32px;
+    }
+    .home-services-card{
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-intro{
+    background-color: #1d2230;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contact-intro h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #f58220;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+.contact-intro p{
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.contact-info{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-info h3{
+    text-decoration: underline;
+    color: #1d2230;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.contact-info p{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.contact-info strong{
+    color: #f58220;
+}
+
+.contact-form{
+    background-color: #f5f5f5;
+    padding: 60px 10%;
+}
+
+.contact-form h3{
+    color: #1d2230;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.contact-form form{
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-form label{
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button{
+    display: block;
+    margin: 10px auto 0;
+    background-color: #f58220;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    background-color: #1d2230;
+}
+
+.footer{
+    background-color: #1d2230;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.footer p{
+    font-size: 14px;
+}
