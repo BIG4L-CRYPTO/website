@@ -11,6 +11,9 @@ body{
 }
 
 .navbar{
+    position: relative;
+    z-index: 1001;
+    gap: 30px;
     background-color: #1d2230;
     color: white;
     padding: 25px 8%;
@@ -50,11 +53,24 @@ body{
     color: #f58220;
 }
 
+.navbar-dovatech {
+    background-color: rgba(29, 34, 48, 0.65);
+    background-filter: blur(6px);
+    position: relative;
+    z-index: 1001;
+    gap: 30px;
+    color: white;
+    padding: 25px 8%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
 .hero{
     background-color: #1d2230;
     color: white;
     text-align: center;
-    padding: 100px 10%;
+    padding: 50px 6%;
 }
 
 .hero content{
@@ -62,16 +78,17 @@ body{
     margin: auto;
 }
 
-.hero h2{
-    color: #f58220;
-    font-size: 48px;
-    margin-bottom: 25px;
+.hero-content h2{
     letter-spacing: 2px;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #f58220;
+    text-decoration: underline;
 }
 
 .hero p{
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 30px;
 }
 
@@ -131,7 +148,6 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    background-color: rgba(29, 34, 48, 0.85);
 }
 
 .dovatech-nav h1{
@@ -153,7 +169,7 @@ body{
 
 .home-service{
     background-color: #f5f5f5;
-    padding: 70px 10%;
+    padding: 50px 6%;
     text-align: center;
 }
 
@@ -187,7 +203,7 @@ body{
 }
 
 .home-service-card p{
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .view-services{
@@ -212,7 +228,7 @@ body{
 .about{
     background-color: #1d2230;
     color: white;
-    padding: 80px 10%;
+    padding: 50px 6%;
     text-align: center;
 }
 
@@ -225,13 +241,13 @@ body{
 
 .about p{
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.8;
     max-width: 900px;
     margin: auto;
 }
 
 .MISSION-VISION{
-    padding: 70px 10%;
+   padding: 50px 6%;
     Text-align: center;
 }
 
@@ -256,7 +272,7 @@ body{
 }
 
 .MISSION-VISION p{
-    line-height: 1.7;
+    line-height: 1.8;
     max-width: 900px;
     margin: auto;
 }
@@ -264,7 +280,7 @@ body{
 .WHY-US{
     Background-color: #1d2230;
     color: white;
-    padding: 70px 10%;
+    padding: 50px 6%;
     text-align: center;
 }
 
@@ -288,12 +304,14 @@ body{
 }
 
 .WHY-US p{
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .services-intro{
+    background-color: #1d2230;
+    color: white;
     text-align: center;
-    padding: 70px 20px 40px;
+    padding: 50px 6%;
 }
 
 .services-intro h2{
@@ -306,14 +324,14 @@ body{
 
 .services-intro p{
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .services{
     display: grid;
     grid-template-columns: repeat(3 1fr);
     gap: 25px;
-    padding: 30px 10% 70px;
+  padding: 50px 6%;
 }
 
 .service-card{
@@ -335,7 +353,7 @@ body{
 }
 
 .service-card p{
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .service-card:hover{
@@ -347,7 +365,7 @@ body{
     background-color: #1d2230;
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 6%;
 }
 
 .services-cta h2{
@@ -402,7 +420,7 @@ body{
 .contact-intro p{
     max-width: 800px;
     margin: auto;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .contact-info{
@@ -419,6 +437,7 @@ body{
 
 .contact-info p{
     font-size: 17px;
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
@@ -486,5 +505,163 @@ body{
 }
 
 .footer p{
+    line-height: 1.8;
     font-size: 14px;
+}
+
+/*hamburger button*/
+.menu-toggle {
+    display: none;
+    background:none;
+    border:none;
+    color: #f58220;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/*Navigation-links layout*/
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/*Mobile screen styles*/
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #1d2230;
+    z-index: 1000;
+    padding: 35px 5%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.nav-links.active {
+    display: flex;
+}
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 15px 20px;
+    text-align: center;
+}
+.nav-links a:hover {
+    background-color: #f58220;
+}
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+#search-input{
+    width: 350px;
+    max-width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-button{
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    right: 0;
+    gap: 0;
+    width: 100;
+    flex-direction: column;
+    background-color: #1d2230;
+    color: white;
+    padding: 10px 15px;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-button:hover{
+    background-color: #f58220;
+    transform: translateY(-2px);
+}
+
+#search-results {
+    display: none;
+    width: 250px;
+    max-width: 300px;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+#search-results.search.result {
+    width: 100%;
+    max-width: 350px;
+}
+.search-result {
+    padding: 20px;
+    box-sizing:border-box;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 15px;
+    background-filter:6px(blur);
+    background-color: rgba(100, 100, 109, 0.65);
+    border-left: 5px solid #f58220;
+    border: 1px solid #f58220;
+    border-radius: 8px;
+}
+
+.search-result h3 {
+    margin: 0 0 10px;
+    color: #1d2230;
+    line-height: 1.6;
+}
+
+.search-result p {
+    margin: 0 0 15px;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.result-link {
+    display: inline-block;
+    background-color: #f58220;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.result-link {
+    background-color: #1d2230;
+}
+.result-link:hover {
+    background-color: #f58220;
 }
