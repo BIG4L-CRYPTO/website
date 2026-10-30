@@ -702,3 +702,24 @@ body{
     transform: translateY(-8px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
+
+/* GENERAL MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
