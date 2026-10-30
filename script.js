@@ -137,3 +137,28 @@ function searchWebsite() {
 inquiryForm.reset();
 
 //CALCULATOR PROGRAM
+function addItem () {
+    const items = document.getElementById("items");
+    const row = document.createElement("div");appendChild(row);
+
+    row.innerHTML = ` 
+        <input type="text" placeholder="Item name"> 
+        <input type="number" placeholder="price (KSH)" class="price">
+    `;
+
+    items.appendChild(row);        
+}
+
+document.addEventListener("input", function() {
+    const prices = document.querySelectorAll("price");
+
+    let total= 0;
+
+    prices.forEach(function (price) {
+        total += Number(price.value) || 0;
+
+    });
+
+    document.getElementById("total").innerText - total;
+
+});

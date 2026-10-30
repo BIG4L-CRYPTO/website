@@ -665,3 +665,40 @@ body{
 .result-link:hover {
     background-color: #f58220;
 }
+
+.calculator {
+    background: #717070;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.calculator input {
+    padding: 10px;
+    margin: 5px;
+    width: 40%;
+}
+
+.calculator button {
+    background: #f58220;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+.calculator h2 {
+    font-family: 'sans-serif';
+    color: #1d2230;
+    text-decoration: underline;
+}
+.calculator h3 {
+    color: #1d2230;
+    text-decoration: underline;
+}
+.calculator button:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
