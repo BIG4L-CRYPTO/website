@@ -55,7 +55,7 @@ body{
 
 .navbar-dovatech {
     background-color: rgba(29, 34, 48, 0.65);
-    background-filter: blur(6px);
+    backdrop-filter: blur(6px);
     position: relative;
     z-index: 1001;
     gap: 30px;
@@ -73,7 +73,7 @@ body{
     padding: 50px 6%;
 }
 
-.hero content{
+.hero-content{
     max-width: 900px;
     margin: auto;
 }
@@ -108,9 +108,12 @@ body{
 }
 
 .dovatech-showcase{
+    position: relative;
+    max-width: 100%;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .dovatech-showcase img {
@@ -124,14 +127,15 @@ body{
     width: 100%;
     height: 100%;
     display: flex;
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 .slides img{
-    min-width: 100%;
+    flex: 0 0 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
-   ;
+    display: block;
 }
 
 .slides img.active{
@@ -148,6 +152,8 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .dovatech-nav h1{
@@ -190,7 +196,7 @@ body{
 
 .home-service-card{
     background-color: white;
-    color: white;
+    color: #222;
     padding: 30px 25px;
     border-radius: 8px;
     border-top: 4px solid #f58220;
@@ -329,7 +335,7 @@ body{
 
 .services{
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
   padding: 50px 6%;
 }
@@ -391,13 +397,13 @@ body{
 }
 @media (max-width: 768px){
     .services{
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         padding: 30px 8%;
     }
     .services-intro h2{
         font-size: 32px;
     }
-    .home-services-card{
+    .home-service-cards{
         grid-template-columns: 1fr;
     }
 }
@@ -589,7 +595,7 @@ body{
     left: 0;
     right: 0;
     gap: 0;
-    width: 100;
+    width: 100%;
     flex-direction: column;
     background-color: #1d2230;
     color: white;
@@ -629,7 +635,7 @@ body{
     width: 100%;
     max-width: none;
     margin-bottom: 15px;
-    background-filter:6px(blur);
+    backdrop-filter:6px(blur);
     background-color: rgba(100, 100, 109, 0.65);
     border-left: 5px solid #f58220;
     border: 1px solid #f58220;
@@ -701,25 +707,4 @@ body{
 .calculator button:hover{
     transform: translateY(-8px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* GENERAL MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-
-    html, body {
-        width: 100%;
-        min-height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
